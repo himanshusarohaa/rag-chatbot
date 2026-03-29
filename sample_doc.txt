@@ -1,0 +1,17 @@
+Artificial Intelligence is transforming industries worldwide.
+
+Machine learning is a subset of AI that allows computers to learn from data without being explicitly programmed.
+
+Deep learning uses neural networks with many layers to model complex patterns in data.
+
+Natural Language Processing (NLP) enables machines to understand and generate human language.
+
+Large Language Models like GPT, Claude, and Gemini are trained on vast amounts of text data.
+
+Retrieval-Augmented Generation (RAG) combines retrieval systems with language models.
+
+In RAG, documents are chunked, embedded into vectors, stored in a vector database, and retrieved when relevant to a user query. The retrieved chunks are sent to the LLM as context.
+
+This approach is cheaper than fine-tuning and works well for document Q&A tasks.
+
+Python is the most popular programming language for AI and ML development in 2026.
