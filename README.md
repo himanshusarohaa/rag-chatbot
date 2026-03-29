@@ -52,7 +52,6 @@ cd rag-chatbot
 2. Create and activate a virtual environment
 bash
 
-Copy
 
 Download
 python -m venv venv
@@ -60,16 +59,12 @@ source venv/bin/activate        # On Windows: venv\Scripts\activate
 3. Install dependencies
 bash
 
-Copy
 
 Download
 pip install -r requirements.txt
 4. Set up your Gemini API key
 Create a file named .env in the project root and add:
 
-text
-
-Copy
 
 Download
 GEMINI_API_KEY=AIzaSy...
@@ -80,7 +75,7 @@ The repository includes sample_doc.txt. You can index it with:
 
 bash
 
-Copy
+
 
 Download
 python ingest.py
@@ -89,7 +84,6 @@ This will create the chroma_db/ folder locally.
 6. Run the app
 bash
 
-Copy
 
 Download
 streamlit run app.py
@@ -98,7 +92,6 @@ Your browser will open at http://localhost:8501.
 📁 Project Structure
 text
 
-Copy
 
 Download
 rag-chatbot/
@@ -110,23 +103,16 @@ rag-chatbot/
 ├── .env                   # (ignored) API key
 ├── .gitignore             # Excludes .env, chroma_db/, etc.
 └── README.md              # This file
+
 🧠 How It Works
 Document Upload – User uploads a PDF or TXT.
-
 Chunking – The document is split into overlapping chunks (size 400, overlap 60).
-
 Embedding – Each chunk is converted into a vector using a free sentence‑transformer model.
-
 Vector Store – All vectors are stored in a ChromaDB collection.
-
 Question – User asks a question.
-
 Retrieval – The top‑3 most similar chunks are retrieved from ChromaDB.
-
 Generation – The chunks are sent to Gemini along with the question, with a prompt to answer only using the context.
-
 Answer – The LLM returns a grounded answer, and the source chunks are shown.
-
 This is the exact architecture used in modern enterprise RAG systems.
 
 🔒 Environment Variables
@@ -136,16 +122,11 @@ On deployment (Streamlit Cloud), add this key in the Secrets section.
 
 📬 Contact
 Himanshu Saroha
-
 GitHub: @himanshusarohaa
 
 🙏 Acknowledgements
 LangChain
-
 ChromaDB
-
 HuggingFace
-
 Google Gemini
-
 Streamlit
